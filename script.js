@@ -21,15 +21,17 @@ function httpGetAsync(theUrl, callback)
 
 function updateMap(res) {
   const resParsed = JSON.parse(res);
-  const lat = resParsed.iss_position.latitude;
-  const long = resParsed.iss_position.longitude;
+  const latitude = resParsed.iss_position.latitude;
+  const longitude = resParsed.iss_position.longitude;
 
-  const iss = { lat: lat, lng: long };
+  const iss = { lat: parseFloat(latitude), lng: parseFloat(longitude) };
+
   // The map, centered at iss location
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
     center: iss,
   });
+
   // The marker, positioned at iss location
   const marker = new google.maps.Marker({
     position: iss,
