@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
+</html>
+
+
+<!--
+https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-css
+https://developers.google.com/maps/get-started
+https://console.cloud.google.com/google/maps-apis/start?_ga=2.233944350.1897460223.1649345752-1097055339.1649345752
+ -->
